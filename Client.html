@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confidential Clients</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <style>
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    h1 {
+        margin: 0;
+    }
+    
+    #clients-list {
+        max-width: 800px;
+        margin: 20px auto;
+    }
+    
+    .client-card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .client-name {
+        font-weight: bold;
+    }
+    
+    .client-info {
+        margin-top: 5px;
+    }
+    
+    .client-info span {
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Confidential Clients</h1>
+    </header>
+    <div id="clients-list"></div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // Sample data for demonstration
+    const clients = [
+        { name: "Client A", industry: "Finance", contact: "John Doe" },
+        { name: "Client B", industry: "Technology", contact: "Jane Smith" },
+        { name: "Client C", industry: "Healthcare", contact: "Michael Johnson" }
+    ];
+
+    const clientsList = document.getElementById("clients-list");
+
+    // Loop through clients data and create HTML elements
+    clients.forEach(client => {
+        const clientCard = document.createElement("div");
+        clientCard.classList.add("client-card");
+
+        const clientName = document.createElement("div");
+        clientName.classList.add("client-name");
+        clientName.textContent = client.name;
+
+        const clientInfo = document.createElement("div");
+        clientInfo.classList.add("client-info");
+        clientInfo.innerHTML = `<span>Industry: ${client.industry}</span><span>Contact: ${client.contact}</span>`;
+
+        clientCard.appendChild(clientName);
+        clientCard.appendChild(clientInfo);
+        clientsList.appendChild(clientCard);
+    });
+});
+
+    </script>
+</body>
+</html>

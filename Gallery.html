@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories</title>
+    <link rel="stylesheet" href="gStyle.css">
+</head>
+<body>
+    <div class="header">
+
+        <header class="header-content">
+            <a href="#logo" class="logo">
+                <img src="./images/kads.jpg" alt="logoimg" class="logo-icon">
+                <span class="logo-text"></span>
+            </a>
+
+            <a href="contact.html" class="contact-button">
+                Contact Us
+            </a>
+
+            <button class="menu-button">
+                <img src="./images/Hamburger.svg" alt="menu-logo" class="menu-icon">
+            </button>
+        </header>
+    </div> 
+
+    <h2 class="head">Our Memories</h2>
+
+    <div class="full-img" id="fullImgBox">
+        <img src="Gallery/11.jpeg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+
+    <div class="img-gallery">
+        <img  src="Gallery/11.jpeg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/12.jpeg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/16.jpeg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/17.jpeg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/18.jpeg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/19.jpeg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/20.jpeg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/21.jpeg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/22.jpg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/23.jpg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/24.jpg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/25.jpg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/26.jpg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/27.jpg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/28.jpg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/29.jpg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/30.jpg" onclick="openFullImg(this.src)">
+        <img  src="Gallery/31.jpg" onclick="openFullImg(this.src)">
+
+
+
+
+
+
+    </div>
+
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(pic){
+            fullImgBox.style.display= "flex";
+            fullImg.src=pic;
+        }
+
+        function closeFullImg(){
+            fullImgBox.style.display = "none";
+        }
+    </script>
+</body>
+</html>
